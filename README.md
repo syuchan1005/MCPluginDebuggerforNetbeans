@@ -1,1 +1,1 @@
-look here -> https://github.com/syuchan1005/MCPluginDebuggerfor
+look here -> https://github.com/syuchan1005/MCPluginDebuggerforMC
