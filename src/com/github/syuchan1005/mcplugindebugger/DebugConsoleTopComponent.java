@@ -30,7 +30,7 @@ import org.openide.util.Utilities;
 )
 @TopComponent.Description(
         preferredID = "DebugConsoleTopComponent",
-        //iconBase="SET/PATH/TO/ICON/HERE", 
+        iconBase="/com/github/syuchan1005/mcplugindebugger/mcPluginDebugger.png", 
         persistenceType = TopComponent.PERSISTENCE_ALWAYS
 )
 @TopComponent.Registration(mode = "properties", openAtStartup = false)
@@ -41,9 +41,9 @@ import org.openide.util.Utilities;
         preferredID = "DebugConsoleTopComponent"
 )
 @Messages({
-    "CTL_DebugConsoleAction=DebugConsole",
-    "CTL_DebugConsoleTopComponent=DebugConsole Window",
-    "HINT_DebugConsoleTopComponent=This is a DebugConsole window"
+    "CTL_DebugConsoleAction=MCDebugConsole",
+    "CTL_DebugConsoleTopComponent=MCDebugConsole",
+    "HINT_DebugConsoleTopComponent=This is a MCDebugConsole window"
 })
 public final class DebugConsoleTopComponent extends TopComponent {
 
@@ -328,7 +328,6 @@ public final class DebugConsoleTopComponent extends TopComponent {
     }// </editor-fold>//GEN-END:initComponents
 
     private void serverBrowseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_serverBrowseButtonActionPerformed
-        System.out.println(getProjectBaseDir().toString());
         JFileChooser chooser = new JFileChooser(getProjectBaseDir());
         if (chooser.showOpenDialog(mainPanel) == JFileChooser.APPROVE_OPTION) {
             config.setServerJarFile(new File(chooser.getSelectedFile().getPath()));
